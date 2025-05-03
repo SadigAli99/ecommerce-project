@@ -21,7 +21,7 @@ class MainService
         return $this->model::create($data);
     }
 
-    public function edit($model, array $data)
+    public function update($model, array $data)
     {
         $model->update($data);
     }

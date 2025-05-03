@@ -1,769 +1,446 @@
 @extends('back.layouts.master')
 
+@section('title','Dashboard')
+
 @section('content')
-    <div class="main_content_iner ">
-        <div class="container-fluid p-0 ">
-            <div class="row ">
-                <div class="col-lg-12">
-                    <div class="single_element">
-                        <div class="quick_activity">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="quick_activity_wrap">
-                                        <!-- single_quick_activity  -->
-                                        <div class="single_quick_activity">
-                                            <div class="count_content">
-                                                <p>Revenue</p>
-                                                <h3>$<span class="counter">35000</span> </h3>
-                                            </div>
-                                            <a href="#" class="notification_btn">Today</a>
-                                            <div id="bar1" class="barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div>
-                                                <span class="fill" data-percentage="95"></span>
-                                            </div>
-                                        </div>
-                                        <!-- single_quick_activity  -->
-                                        <div class="single_quick_activity">
-                                            <div class="count_content">
-                                                <p>Orders</p>
-                                                <h3><span class="counter">35000</span> </h3>
-                                            </div>
-                                            <a href="#" class="notification_btn yellow_btn">This Week</a>
-                                            <div id="bar2" class="barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div>
-                                                <span class="fill" data-percentage="65"></span>
-                                            </div>
-                                        </div>
-                                        <!-- single_quick_activity  -->
-                                        <div class="single_quick_activity">
-                                            <div class="count_content">
-                                                <p>Leads</p>
-                                                <h3>$<span class="counter">50000</span> </h3>
-                                            </div>
-                                            <a href="#" class="notification_btn green_btn">This Month</a>
-                                            <div id="bar3" class="barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div>
-                                                <span class="fill" data-percentage="75"></span>
-                                            </div>
-                                        </div>
-                                        <!-- single_quick_activity  -->
-                                        <div class="single_quick_activity">
-                                            <div class="count_content">
-                                                <p>Lead Conversion Rate</p>
-                                                <h3><span class="counter">50</span> %</h3>
-                                            </div>
-                                            <a href="#" class="notification_btn violate_btn">Anual</a>
-                                            <div id="bar4" class="barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div>
-                                                <span class="fill" data-percentage="85"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="page-content">
+        <div class="container-fluid">
 
-                <div class="col-lg-8">
-                    <div class="white_card card_height_100 mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Payment History</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body p-0">
-                            <div id="iq-chart-order" style="height: 400px; position: relative;"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="white_card card_height_100 mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">1 United States Dollar Equals</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div class="equal_hdr mb_15 d-flex justify-content-between align-items-center flex-wrap">
-                                <h4 class="f_s_28 f_w_700">0.50 Euro</h4>
-                                <a href="#" class="Euro_btn">Euro</a>
-                            </div>
-                            <p class="color_gray f_s_14 f_w_700 mb_15 ">24 Apr 6.00 am UTC Declaration</p>
-                            <div class="grid_4rap">
-                                <div class="single_wrap_input">
-                                    <div class="common_input">
-                                        <input type="text" placeholder="1">
-                                    </div>
-                                </div>
-                                <div class="single_wrap_input">
-                                    <select class="nice_Select2 wide" name="" id="">
-                                        <option value="1">United State</option>
-                                        <option value="1">United State</option>
-                                    </select>
-                                </div>
-                                <div class="single_wrap_input">
-                                    <div class="common_input">
-                                        <input type="text" placeholder="1">
-                                    </div>
-                                </div>
-                                <div class="single_wrap_input">
-                                    <select class="nice_Select2 wide" name="" id="">
-                                        <option value="1">Euro</option>
-                                        <option value="1">Euro</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div id="area-spaline"></div>
-                        </div>
-                    </div>
-                </div>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0">Dashboard</h4>
 
-                <div class="col-lg-6">
-                    <div class="white_card  mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Payment History</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Upcube</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
                         </div>
-                        <div class="white_card_body">
-                            <div class="table-responsive">
-                                <table class="table bayer_table m-0">
-                                    <tbody>
-                                        <tr style="border: hidden;">
-                                            <td>
-                                                <img class="byder_thumb"
-                                                    src="{{ asset('back/assets') }}/img/Payment/1.png" alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit
-                                                        PayPal</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr style="border: hidden;">
-                                            <td>
-                                                <img class="byder_thumb"
-                                                    src="{{ asset('back/assets') }}/img/Payment/2.png" alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit
-                                                        PayPal</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr style="border: hidden;">
-                                            <td>
-                                                <img class="byder_thumb"
-                                                    src="{{ asset('back/assets') }}/img/Payment/3.png" alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit from
-                                                        Bank</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr style="border: hidden;">
-                                            <td>
-                                                <img class="byder_thumb"
-                                                    src="{{ asset('back/assets') }}/img/Payment/4.png" alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Cancelled
-                                                    </h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr style="border: hidden;">
-                                            <td>
-                                                <img class="byder_thumb"
-                                                    src="{{ asset('back/assets') }}/img/Payment/5.png" alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit from
-                                                        Bank</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card_height_100  -->
-                    <div class="white_card  mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Monthly Invoices</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div class="table-responsive">
-                                <table class="table bayer_table2 m-0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="w_70">
-                                                <img class="byder_thumb wh_56"
-                                                    src="{{ asset('back/assets') }}/img/Payment/check_1.png"
-                                                    alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit
-                                                        PayPal</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="byder_thumb wh_56"
-                                                    src="{{ asset('back/assets') }}/img/Payment/check_2.png"
-                                                    alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit
-                                                        PayPal</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="byder_thumb wh_56"
-                                                    src="{{ asset('back/assets') }}/img/Payment/check_3.png"
-                                                    alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit from
-                                                        Bank</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="byder_thumb wh_56"
-                                                    src="{{ asset('back/assets') }}/img/Payment/check_4.png"
-                                                    alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Cancelled
-                                                    </h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="byder_thumb wh_56"
-                                                    src="{{ asset('back/assets') }}/img/Payment/check_5.png"
-                                                    alt="">
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> Deposit from
-                                                        Bank</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">5 march, 18:33</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="payment_gatway text-end">
-                                                    <h5 class="byer_name  f_s_16 f_w_700 color_theme"> +2000</h5>
-                                                    <p class="color_gray f_s_12 f_w_700 ">EUR</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="white_card mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Social Media</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="single_social_media d-flex align-items-center">
-                                        <div class="icon_media">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </div>
-                                        <div class="media_contet">
-                                            <span>Folower</span>
-                                            <h4>35000</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single_social_media d-flex align-items-center">
-                                        <div class="icon_media twitter_bg">
-                                            <i class="fab fa-twitter"></i>
-                                        </div>
-                                        <div class="media_contet">
-                                            <span>Folower</span>
-                                            <h4>2500</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single_social_media d-flex align-items-center">
-                                        <div class="icon_media youtube_bg">
-                                            <i class="fab fa-youtube"></i>
-                                        </div>
-                                        <div class="media_contet">
-                                            <span>Folower</span>
-                                            <h4>1.7M</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_social_media d-flex align-items-center">
-                                        <div class="icon_media insta_bg">
-                                            <i class="fab fa-instagram"></i>
-                                        </div>
-                                        <div class="media_contet">
-                                            <span>Folower</span>
-                                            <h4>35000</h4>
-                                        </div>
-                                    </div>
-                                    <div class="single_social_media d-flex align-items-center">
-                                        <img class="img-fluid" src="{{ asset('back/assets') }}/img/plane.png"
-                                            alt="">
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="white_card mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Recent Activity</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div id="iq-chart-efficient" style="height: 250px; position: relative;"></div>
-                        </div>
-                    </div>
-                    <div class="white_card mb_30">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Recent Activity</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div class="Activity_timeline">
-                                <ul>
-                                    <li>
-                                        <div class="activity_bell"></div>
-                                        <div class="timeLine_inner d-flex align-items-center">
-                                            <div class="activity_wrap d-flex ">
-                                                <h6 class="nowrap">5 min ago</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="activity_bell"></div>
-                                        <div class="timeLine_inner d-flex align-items-center">
-                                            <div class="activity_wrap d-flex ">
-                                                <h6 class="nowrap">5 min ago</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="activity_bell"></div>
-                                        <div class="timeLine_inner d-flex align-items-center">
-                                            <div class="activity_wrap d-flex ">
-                                                <h6 class="nowrap">5 min ago</h6>
-                                                <p>Lorem ipsum dolor sit amet, consectetur </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-12">
-                    <div class="white_card card_height_100 mb_30 QA_section">
-                        <div class="white_card_header">
-                            <div class="box_header m-0">
-                                <div class="main-title">
-                                    <h3 class="m-0">Monthly Invoices</h3>
-                                </div>
-                                <div class="header_more_tool">
-                                    <div class="dropdown">
-                                        <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </span>
-                                        <div class="dropdown-menu dropdown-menu-right"
-                                            aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"> <i class="ti-eye"></i>
-                                                Action</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-trash"></i>
-                                                Delete</a>
-                                            <a class="dropdown-item" href="#"> <i class="fas fa-edit"></i>
-                                                Edit</a>
-                                            <a class="dropdown-item" href="#"> <i class="ti-printer"></i>
-                                                Print</a>
-                                            <a class="dropdown-item" href="#"> <i class="fa fa-download"></i>
-                                                Download</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="white_card_body">
-                            <div class="QA_table table-responsive ">
-                                <!-- table-responsive -->
-                                <table class="table pt-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Profile</th>
-                                            <th scope="col">Activity Type</th>
-                                            <th scope="col">Owner</th>
-                                            <th scope="col">Task</th>
-                                            <th scope="col">Budget</th>
-                                            <th scope="col">Priority</th>
-                                            <th scope="col">Period</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Deadline</th>
-                                            <th scope="col">Attachment</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td> <img class="user_thumb"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/man_1.png"
-                                                    alt="">
-                                            </td>
-                                            <td>Product</td>
-                                            <td class="nowrap">Tom Smitn</td>
-                                            <td class="nowrap">Client data test</td>
-                                            <td>$125000</td>
-                                            <td>High</td>
-                                            <td>Oct</td>
-                                            <td><img class="check_status"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/check.png"
-                                                    alt="">
-                                            </td>
-                                            <td> 25/10/2020</td>
-                                            <td> <button class="btn_1">PDF</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img class="user_thumb"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/man_2.png"
-                                                    alt="">
-                                            </td>
-                                            <td>Product</td>
-                                            <td class="nowrap">Tom Smitn</td>
-                                            <td class="nowrap">Client data test</td>
-                                            <td>$125000</td>
-                                            <td>High</td>
-                                            <td>Oct</td>
-                                            <td><img class="check_status"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/check.png"
-                                                    alt="">
-                                            </td>
-                                            <td> 25/10/2020</td>
-                                            <td> <button class="btn_1">PDF</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img class="user_thumb"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/man_3.png"
-                                                    alt="">
-                                            </td>
-                                            <td>Product</td>
-                                            <td class="nowrap">Tom Smitn</td>
-                                            <td class="nowrap">Client data test</td>
-                                            <td>$125000</td>
-                                            <td>High</td>
-                                            <td>Oct</td>
-                                            <td><img class="check_status"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/check.png"
-                                                    alt="">
-                                            </td>
-                                            <td> 25/10/2020</td>
-                                            <td> <button class="btn_1">PDF</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img class="user_thumb"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/man_4.png"
-                                                    alt="">
-                                            </td>
-                                            <td>Product</td>
-                                            <td class="nowrap">Tom Smitn</td>
-                                            <td class="nowrap">Client data test</td>
-                                            <td>$125000</td>
-                                            <td>High</td>
-                                            <td>Oct</td>
-                                            <td><img class="check_status"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/close.png"
-                                                    alt="">
-                                            </td>
-                                            <td> 25/10/2020</td>
-                                            <td> <button class="btn_1">PDF</button> </td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img class="user_thumb"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/man_5.png"
-                                                    alt="">
-                                            </td>
-                                            <td>Product</td>
-                                            <td class="nowrap">Tom Smitn</td>
-                                            <td class="nowrap">Client data test</td>
-                                            <td>$125000</td>
-                                            <td>High</td>
-                                            <td>Oct</td>
-                                            <td><img class="check_status"
-                                                    src="{{ asset('back/assets') }}/img/invoice_img/close.png"
-                                                    alt="">
-                                            </td>
-                                            <td> 25/10/2020</td>
-                                            <td> <button class="btn_1">PDF</button> </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate font-size-14 mb-2">Total Sales</p>
+                                    <h4 class="mb-2">1452</h4>
+                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
+                                                class="ri-arrow-right-up-line me-1 align-middle"></i>9.23%</span>from
+                                        previous period</p>
+                                </div>
+                                <div class="avatar-sm">
+                                    <span class="avatar-title bg-light text-primary rounded-3">
+                                        <i class="ri-shopping-cart-2-line font-size-24"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- end cardbody -->
+                    </div><!-- end card -->
+                </div><!-- end col -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate font-size-14 mb-2">New Orders</p>
+                                    <h4 class="mb-2">938</h4>
+                                    <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i
+                                                class="ri-arrow-right-down-line me-1 align-middle"></i>1.09%</span>from
+                                        previous period</p>
+                                </div>
+                                <div class="avatar-sm">
+                                    <span class="avatar-title bg-light text-success rounded-3">
+                                        <i class="mdi mdi-currency-usd font-size-24"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- end cardbody -->
+                    </div><!-- end card -->
+                </div><!-- end col -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate font-size-14 mb-2">New Users</p>
+                                    <h4 class="mb-2">8246</h4>
+                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
+                                                class="ri-arrow-right-up-line me-1 align-middle"></i>16.2%</span>from
+                                        previous period</p>
+                                </div>
+                                <div class="avatar-sm">
+                                    <span class="avatar-title bg-light text-primary rounded-3">
+                                        <i class="ri-user-3-line font-size-24"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- end cardbody -->
+                    </div><!-- end card -->
+                </div><!-- end col -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate font-size-14 mb-2">Unique Visitors</p>
+                                    <h4 class="mb-2">29670</h4>
+                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
+                                                class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from
+                                        previous period</p>
+                                </div>
+                                <div class="avatar-sm">
+                                    <span class="avatar-title bg-light text-success rounded-3">
+                                        <i class="mdi mdi-currency-btc font-size-24"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- end cardbody -->
+                    </div><!-- end card -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <div class="row">
+                <div class="col-xl-6">
+
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="float-end d-none d-md-inline-block">
+                                <div class="dropdown card-header-dropdown">
+                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Export</a>
+                                        <a class="dropdown-item" href="#">Import</a>
+                                        <a class="dropdown-item" href="#">Download Report</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title mb-4">Email Sent</h4>
+
+                            <div class="text-center pt-3">
+                                <div class="row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="d-inline-flex">
+                                            <h5 class="me-2">25,117</h5>
+                                            <div class="text-success font-size-12">
+                                                <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+                                            </div>
+                                        </div>
+                                        <p class="text-muted text-truncate mb-0">Marketplace</p>
+                                    </div><!-- end col -->
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div class="d-inline-flex">
+                                            <h5 class="me-2">$34,856</h5>
+                                            <div class="text-success font-size-12">
+                                                <i class="mdi mdi-menu-up font-size-14"> </i>1.2 %
+                                            </div>
+                                        </div>
+                                        <p class="text-muted text-truncate mb-0">Last Week</p>
+                                    </div><!-- end col -->
+                                    <div class="col-sm-4">
+                                        <div class="d-inline-flex">
+                                            <h5 class="me-2">$18,225</h5>
+                                            <div class="text-success font-size-12">
+                                                <i class="mdi mdi-menu-up font-size-14"> </i>1.7 %
+                                            </div>
+                                        </div>
+                                        <p class="text-muted text-truncate mb-0">Last Month</p>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div>
+                        </div>
+                        <div class="card-body py-0 px-2">
+                            <div id="area_chart" class="apex-charts" dir="ltr"></div>
+                        </div>
+                    </div><!-- end card -->
+                </div>
+                <!-- end col -->
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="float-end d-none d-md-inline-block">
+                                <div class="dropdown">
+                                    <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <span class="text-muted">This Years<i
+                                                class="mdi mdi-chevron-down ms-1"></i></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Today</a>
+                                        <a class="dropdown-item" href="#">Last Week</a>
+                                        <a class="dropdown-item" href="#">Last Month</a>
+                                        <a class="dropdown-item" href="#">This Year</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title mb-4">Revenue</h4>
+
+                            <div class="text-center pt-3">
+                                <div class="row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div>
+                                            <h5>17,493</h5>
+                                            <p class="text-muted text-truncate mb-0">Marketplace</p>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <div>
+                                            <h5>$44,960</h5>
+                                            <p class="text-muted text-truncate mb-0">Last Week</p>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="col-sm-4">
+                                        <div>
+                                            <h5>$29,142</h5>
+                                            <p class="text-muted text-truncate mb-0">Last Month</p>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div>
+                        </div>
+                        <div class="card-body py-0 px-2">
+                            <div id="column_line_chart" class="apex-charts" dir="ltr"></div>
+                        </div>
+                    </div><!-- end card -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="dropdown float-end">
+                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="mdi mdi-dots-vertical"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                </div>
+                            </div>
+
+                            <h4 class="card-title mb-4">Latest Transactions</h4>
+
+                            <div class="table-responsive">
+                                <table class="table table-centered mb-0 align-middle table-hover table-nowrap">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Status</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th style="width: 120px;">Salary</th>
+                                        </tr>
+                                    </thead><!-- end thead -->
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Charles Casey</h6>
+                                            </td>
+                                            <td>Web Developer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                </div>
+                                            </td>
+                                            <td>
+                                                23
+                                            </td>
+                                            <td>
+                                                04 Apr, 2021
+                                            </td>
+                                            <td>$42,450</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Alex Adams</h6>
+                                            </td>
+                                            <td>Python Developer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
+                                                </div>
+                                            </td>
+                                            <td>
+                                                28
+                                            </td>
+                                            <td>
+                                                01 Aug, 2021
+                                            </td>
+                                            <td>$25,060</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Prezy Kelsey</h6>
+                                            </td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                </div>
+                                            </td>
+                                            <td>
+                                                35
+                                            </td>
+                                            <td>
+                                                15 Jun, 2021
+                                            </td>
+                                            <td>$59,350</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Ruhi Fancher</h6>
+                                            </td>
+                                            <td>React Developer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                </div>
+                                            </td>
+                                            <td>
+                                                25
+                                            </td>
+                                            <td>
+                                                01 March, 2021
+                                            </td>
+                                            <td>$23,700</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Juliet Pineda</h6>
+                                            </td>
+                                            <td>Senior Web Designer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                </div>
+                                            </td>
+                                            <td>
+                                                38
+                                            </td>
+                                            <td>
+                                                01 Jan, 2021
+                                            </td>
+                                            <td>$69,185</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Den Simpson</h6>
+                                            </td>
+                                            <td>Web Designer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
+                                                </div>
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                01 Sep, 2021
+                                            </td>
+                                            <td>$37,845</td>
+                                        </tr>
+                                        <!-- end -->
+                                        <tr>
+                                            <td>
+                                                <h6 class="mb-0">Mahek Torres</h6>
+                                            </td>
+                                            <td>Senior Laravel Developer</td>
+                                            <td>
+                                                <div class="font-size-13"><i
+                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                </div>
+                                            </td>
+                                            <td>
+                                                32
+                                            </td>
+                                            <td>
+                                                20 May, 2021
+                                            </td>
+                                            <td>$55,100</td>
+                                        </tr>
+                                        <!-- end -->
+                                    </tbody><!-- end tbody -->
+                                </table> <!-- end table -->
+                            </div>
+                        </div><!-- end card -->
+                    </div><!-- end card -->
+                </div>
+                <!-- end col -->
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="float-end">
+                                <select class="form-select shadow-none form-select-sm">
+                                    <option selected>Apr</option>
+                                    <option value="1">Mar</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Jan</option>
+                                </select>
+                            </div>
+                            <h4 class="card-title mb-4">Monthly Earnings</h4>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-center mt-4">
+                                        <h5>3475</h5>
+                                        <p class="mb-2 text-truncate">Market Place</p>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-4">
+                                    <div class="text-center mt-4">
+                                        <h5>458</h5>
+                                        <p class="mb-2 text-truncate">Last Week</p>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-4">
+                                    <div class="text-center mt-4">
+                                        <h5>9062</h5>
+                                        <p class="mb-2 text-truncate">Last Month</p>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+
+                            <div class="mt-4">
+                                <div id="donut-chart" class="apex-charts"></div>
+                            </div>
+                        </div>
+                    </div><!-- end card -->
+                </div><!-- end col -->
+            </div>
+            <!-- end row -->
         </div>
+
     </div>
+    <!-- End Page-content -->
 @endsection

@@ -1,55 +1,28 @@
-<!-- footer  -->
-<script src="{{ asset('back/assets') }}/js/jquery1-3.4.1.min.js"></script>
-<!-- popper js -->
-<script src="{{ asset('back/assets') }}/js/popper1.min.js"></script>
-<!-- bootstarp js -->
-<script src="{{ asset('back/assets') }}/js/bootstrap1.min.js"></script>
-<!-- sidebar menu  -->
-<script src="{{ asset('back/assets') }}/js/metisMenu.js"></script>
-<!-- waypoints js -->
-<script src="{{ asset('back/assets') }}/vendors/count_up/jquery.waypoints.min.js"></script>
-<!-- waypoints js -->
-<script src="{{ asset('back/assets') }}/vendors/chartlist/Chart.min.js"></script>
-<!-- counterup js -->
-<script src="{{ asset('back/assets') }}/vendors/count_up/jquery.counterup.min.js"></script>
-
-<!-- nice select -->
-<script src="{{ asset('back/assets') }}/vendors/niceselect/js/jquery.nice-select.min.js"></script>
-<!-- owl carousel -->
-<script src="{{ asset('back/assets') }}/vendors/owl_carousel/js/owl.carousel.min.js"></script>
-
-<!-- responsive table -->
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/jquery.dataTables.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/dataTables.responsive.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/dataTables.buttons.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/buttons.flash.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/jszip.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/pdfmake.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/vfs_fonts.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/buttons.html5.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/datatable/js/buttons.print.min.js"></script>
+<!-- JAVASCRIPT -->
+<script src="{{ asset('back/assets') }}/libs/jquery/jquery.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/metismenu/metisMenu.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/simplebar/simplebar.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/node-waves/waves.min.js"></script>
 
 
-<script src="{{ asset('back/assets') }}/js/chart.min.js"></script>
-<!-- progressbar js -->
-<script src="{{ asset('back/assets') }}/vendors/progressbar/jquery.barfiller.js"></script>
-<!-- tag input -->
-<script src="{{ asset('back/assets') }}/vendors/tagsinput/tagsinput.js"></script>
-<!-- text editor js -->
-<script src="{{ asset('back/assets') }}/vendors/text_editor/summernote-bs4.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/am_chart/amcharts.js"></script>
+<!-- apexcharts -->
+<script src="{{ asset('back/assets') }}/libs/apexcharts/apexcharts.min.js"></script>
 
+<!-- jquery.vectormap map -->
+<script src="{{ asset('back/assets') }}/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js">
+</script>
 
-<!-- scrollabe  -->
-<script src="{{ asset('back/assets') }}/vendors/scroll/perfect-scrollbar.min.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/scroll/scrollable-custom.js"></script>
+<!-- Required datatable js -->
+<script src="{{ asset('back/assets') }}/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
 
+<!-- Responsive examples -->
+<script src="{{ asset('back/assets') }}/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ asset('back/assets') }}/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
-<script src="{{ asset('back/assets') }}/vendors/chart_am/core.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/chart_am/charts.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/chart_am/animated.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/chart_am/kelly.js"></script>
-<script src="{{ asset('back/assets') }}/vendors/chart_am/chart-custom.js"></script>
-<!-- custom js -->
-<script src="{{ asset('back/assets') }}/js/custom.js"></script>
-@stack('js')
+<script src="{{ asset('back/assets') }}/js/pages/dashboard.init.js"></script>
+
+<!-- App js -->
+<script src="{{ asset('back/assets') }}/js/app.js"></script>

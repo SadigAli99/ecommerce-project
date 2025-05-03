@@ -1,65 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="az">
 
-
-<!-- Mirrored from demo.dashboardpack.com/marketing-html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Apr 2025 08:39:31 GMT -->
-
 <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Grabit - Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Grabit Admin Login" name="description" />
+    <meta content="Sadig Aliyev" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('back/assets') }}/images/favicon.ico">
 
-    <link rel="icon" href="{{ asset('back/assets') }}/img/logo.png" type="image/png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/css/bootstrap1.min.css" />
-    <!-- themefy CSS -->
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/vendors/themefy_icon/themify-icons.css" />
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/vendors/font_awesome/css/all.min.css" />
-    <!-- datatable CSS -->
-    <!-- scrollabe  -->
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/vendors/scroll/scrollable.css" />
+    <!-- Bootstrap Css -->
+    <link href="{{ asset('back/assets') }}/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet"
+        type="text/css" />
+    <!-- Icons Css -->
+    <link href="{{ asset('back/assets') }}/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="{{ asset('back/assets') }}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-    <!-- menu css  -->
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/css/metisMenu.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/css/style1.css" />
-    <link rel="stylesheet" href="{{ asset('back/assets') }}/css/colors/default.css" id="colorSkinCSS">
 </head>
 
-<body class="">
+<body>
+    <div class="wrapper-page">
+        <div class="container-fluid p-0">
+            <div class="card">
+                <div class="card-body">
 
-    <div class="col-lg-12">
-        <div class="white_box mb_30">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4">
-                    <!-- sign_in  -->
-                    <div class="modal-content cs_modal">
-                        <div class="modal-header justify-content-center theme_bg_1">
-                            <h5 class="modal-title text_white">Log in</h5>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST">
-                                @csrf
-                                <div class="">
-                                    <input type="text" name="email" class="form-control"
-                                        placeholder="Enter your email">
-                                </div>
-                                <div class="">
-                                    <input type="password" name="password" class="form-control" placeholder="Password">
-                                </div>
-                                <button class="btn_1 full_width text-center">Log in</button>
-                            </form>
+                    <div class="text-center mt-4">
+                        <div class="mb-3">
+                            <a href="#" class="auth-logo">
+                                <img src="{{ asset('back/assets') }}/images/logo-dark.png" height="30"
+                                    class="logo-dark mx-auto" alt="">
+                                <img src="{{ asset('back/assets') }}/images/logo-light.png" height="30"
+                                    class="logo-light mx-auto" alt="">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
 
+                    <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
+
+                    <div class="p-3">
+                        <form method="POST" class="form-horizontal mt-3">
+                            @csrf
+                            <div class="form-group mb-3 row">
+                                <div class="col-12">
+                                    <input class="form-control" type="email" name="email" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3 row">
+                                <div class="col-12">
+                                    <input class="form-control" name="password" type="password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3 row">
+                                <div class="col-12">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="remember_me"
+                                            id="customCheck1">
+                                        <label class="form-label ms-1" for="customCheck1">Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3 text-center row mt-3 pt-1">
+                                <div class="col-12">
+                                    <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Log
+                                        In</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-0 row mt-2">
+                                <div class="col-sm-7 mt-3">
+                                    <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Forgot
+                                        your password?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end -->
+                </div>
+                <!-- end cardbody -->
+            </div>
+            <!-- end card -->
         </div>
+        <!-- end container -->
     </div>
+    <!-- end -->
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ asset('back/assets') }}/libs/jquery/jquery.min.js"></script>
+    <script src="{{ asset('back/assets') }}/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('back/assets') }}/libs/metismenu/metisMenu.min.js"></script>
+    <script src="{{ asset('back/assets') }}/libs/simplebar/simplebar.min.js"></script>
+    <script src="{{ asset('back/assets') }}/libs/node-waves/waves.min.js"></script>
+
+    <script src="{{ asset('back/assets') }}/js/app.js"></script>
+
 </body>
 
-<!-- Mirrored from demo.dashboardpack.com/marketing-html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Apr 2025 08:39:31 GMT -->
+<!-- Mirrored from themesdesign.in/upcube/layouts/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 05:30:41 GMT -->
 
 </html>
