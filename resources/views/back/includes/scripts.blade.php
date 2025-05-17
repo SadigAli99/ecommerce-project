@@ -26,3 +26,4 @@
 
 <!-- App js -->
 <script src="{{ asset('back/assets') }}/js/app.js"></script>
+@stack('js')

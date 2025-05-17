@@ -19,3 +19,4 @@
 <link href="{{ asset('back/assets') }}/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="{{ asset('back/assets') }}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+@stack('css')
