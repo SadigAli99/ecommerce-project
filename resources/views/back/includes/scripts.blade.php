@@ -25,5 +25,9 @@
 <script src="{{ asset('back/assets') }}/js/pages/dashboard.init.js"></script>
 
 <!-- App js -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('back/assets') }}/js/app.js"></script>
+<script src="{{ asset('back/assets/js/pages/custom.js') }}"></script>
 @stack('js')
