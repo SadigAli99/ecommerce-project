@@ -19,7 +19,14 @@ class MainService
             foreach ($filter_data as $key => $filter_item) {
                 if ($key == 'search') {
                     if (!empty($filter_item)) {
-                        $query->where($this->model->searchAttribute ?? 'name', 'like', "%$filter_item%");
+                        $searchAttributes = defined($this->model . '::SEARCH_ATTRIBUTES')
+                            ? $this->model::SEARCH_ATTRIBUTES
+                            : ['name'];
+                        $query->where(function ($q) use ($searchAttributes, $filter_item) {
+                            foreach ($searchAttributes as $searchAttribute) {
+                                return $q->orWhere($searchAttribute, 'like', "%$filter_item%");
+                            }
+                        });
                     }
                 } else {
                     if (!is_null($filter_item)) {
