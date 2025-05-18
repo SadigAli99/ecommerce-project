@@ -22,7 +22,7 @@ class SettingController extends Controller
      */
     public function index(Request $request)
     {
-        $settings = $this->settingService->paginate('sort', 'asc', $request->get('limit', 10), $request->except('limit'));
+        $settings = $this->settingService->paginate('sort', 'asc', $request->get('limit', 10), $request->except('limit', 'page'));
         return view('back.pages.setting.index', compact('settings'));
     }
 
@@ -121,7 +121,7 @@ class SettingController extends Controller
 
     public function filter(Request $request)
     {
-        $data = $request->except('limit');
+        $data = $request->except('limit','page');
         $settings = $this->settingService->paginate('sort', 'asc', $request->get('limit', 10), $data);
         $view = view('back.pages.setting.section.filter', compact('settings'))->render();
         return response([

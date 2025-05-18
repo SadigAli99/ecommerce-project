@@ -3,7 +3,7 @@
 let token = document.querySelector('meta[name="csrf_token"]').getAttribute('content');
 
 function convert_letter(item) {
-    item.value = item.value.replace(/[^a-zA-ZğüşıöəƏçĞÜŞİÖÇn ]/g, "");
+    item.value = item.value.replace(/[^a-zA-ZğüşıöəƏçĞÜŞİÖÇn _]/g, "");
 }
 
 function convert_numeric(item) {
@@ -100,9 +100,9 @@ function delete_item(item) {
     });
 }
 
-function change_status(item) {
+function change_status(item, table = 'language') {
     let id = item.getAttribute('data-id');
-    let url = `/admin/language/${id}/change-status`;
+    let url = `/admin/${table}/${id}/change-status`;
     let status = item.checked ? 1 : 0;
     fetch(url, {
         method: 'POST',
