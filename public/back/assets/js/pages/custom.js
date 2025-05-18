@@ -23,6 +23,49 @@ function convert_alphanumeric(item) {
     item.value = item.value.replace(/[^a-zA-Z0-9 ]/g, "");
 }
 
+function convert_phone_number(item) {
+
+    const value = item.value;
+
+    // Rəqəmləri ayırırıq, amma başdakı +994-ü saxlamırıq (yenidən əlavə edəcəyik)
+    let digits = value.replace(/\D/g, '');
+
+    // Əgər 994 ilə başlayırsa, onu çıxarırıq, çünki funksiyada +994 olacaq
+    if (digits.startsWith('994')) {
+        digits = digits.slice(3);
+    }
+
+    // Maksimum 9 rəqəm (50xxxxxxxx)
+    digits = digits.slice(0, 9);
+
+    // Formatlama
+    let formatted = '+994';
+    if (digits.length > 0) {
+        formatted += '(' + digits.slice(0, 2);
+    }
+    if (digits.length >= 2) {
+        formatted += ') ';
+    }
+    if (digits.length >= 5) {
+        formatted += digits.slice(2, 5) + '-';
+    } else if (digits.length > 2) {
+        formatted += digits.slice(2);
+    }
+    if (digits.length >= 7) {
+        formatted += digits.slice(5, 7) + '-';
+    } else if (digits.length > 5) {
+        formatted += digits.slice(5);
+    }
+    if (digits.length >= 9) {
+        formatted += digits.slice(7, 9);
+    } else if (digits.length > 7) {
+        formatted += digits.slice(7);
+    }
+
+    item.value = formatted;
+}
+
+
 function sort(tables) {
     const table = document.getElementById('sortable-table').querySelector('tbody');
     new Sortable(table, {

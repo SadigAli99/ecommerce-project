@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\SettingController;
@@ -30,3 +31,8 @@ Route::get('/social/filter', [SocialController::class, 'filter']);
 Route::resource('social', SocialController::class)->except('destroy');
 Route::post('/social/{id}/destroy', [SocialController::class, 'destroy'])->name('social.destroy');
 // Social Routes End
+
+// Contact Routes Start
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'submit']);
+// Contact Routes End

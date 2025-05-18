@@ -62,6 +62,19 @@ class MainService
         $model->delete();
     }
 
+    public function getFirst()
+    {
+        return $this->model::first();
+    }
+
+    public function createOrUpdate(array $data)
+    {
+        $model = $this->getFirst();
+        if (is_null($model)) $model = $this->create($data);
+        else $this->update($model, $data);
+        return $model;
+    }
+
     private function getSortedValue(): int
     {
         return count($this->getAll()) + 1;
